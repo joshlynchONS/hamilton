@@ -1,0 +1,25 @@
+{
+    "<code>": {
+        "function": "<name of generic function in code>",
+        "dependant variables": ["<list of all dependant variables>"],
+        "description": "Maybe a quick description of the code"
+    },
+    "a002": {
+        "function": "find_largest_value",
+        "dependant variables": ["rfrom", "rfrom1", "rfrom2"],
+        "description": "Code represents number of children"
+    }
+}
+
+OR
+
+{
+    "<function_name>": [
+        {"<code1>": "[<list of all dependant variables>]"},
+        {"<code2>": "[<list of all dependant variables>]"}
+    ],
+    "multiply_codes": [
+        {"a002": ["rfrom", "rfrom2"]},
+        {"a048": ["dvo1", "c002"]}
+    ]
+}
