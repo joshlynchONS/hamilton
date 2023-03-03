@@ -1,29 +1,39 @@
 { 
-    "nansum": {
-        "c21111": ["e14111","e14112","e14113"],
-        "c21111c": ["e14111c","e14112c","e14113c"],
-        "c21111t": ["c21111","c21111c"]
-    },
     "c_codes_shops": {
         "c21111l": {
-            "static_vars": ["shop_ex", ["14111", "14112", "14113"]],
-            "dataset_cols": ["shop","fincode","paid1"]
+            "shop": "source(shop)", 
+            "fincode": "source(fincode)", 
+            "paid1":"source(paid1)", 
+            "code_fincodes": "value(['14111', '14112', '14113'])", 
+            "shop_str": "value(shop_ex)"
         },
         "c21111w": {
-            "static_vars": ["internet_ex", ["14111", "14112", "14113"]],
-            "dataset_cols": ["shop","fincode","paid1"]
+            "shop": "source(shop)", 
+            "fincode": "source(fincode)", 
+            "paid1":"source(paid1)", 
+            "code_fincodes": "value(['14111', '14112', '14113'])", 
+            "shop_str": "value(internet_ex)"
         },
-        "c31111x": {
-            "static_vars": ["clothing_chains", ["31111"]],
-            "dataset_cols": ["shop","fincode","paid1"]
+        "c21111x": {
+            "shop": "source(shop)", 
+            "fincode": "source(fincode)", 
+            "paid1":"source(paid1)", 
+            "code_fincodes": "value(['14111', '14112', '14113'])", 
+            "shop_str": "value(clothing_chains)"
         },
-        "c31111y": {
-            "static_vars": ["large_supermarkets", ["31111"]],
-            "dataset_cols": ["shop","fincode","paid1"]
+        "c21111y": {
+            "shop": "source(shop)", 
+            "fincode": "source(fincode)", 
+            "paid1":"source(paid1)", 
+            "code_fincodes": "value(['14111', '14112', '14113'])", 
+            "shop_str": "value(large_supermarkets)"
         },
-        "c31111z": {
-            "static_vars": ["charity_shops", ["31111"]],
-            "dataset_cols": ["shop","fincode","paid1"]
+        "c21111z": {
+            "shop": "source(shop)", 
+            "fincode": "source(fincode)", 
+            "paid1":"source(paid1)", 
+            "code_fincodes": "value(['14111', '14112', '14113'])", 
+            "shop_str": "value(charity_shops)"
         }
     }
 }
