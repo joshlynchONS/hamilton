@@ -1,5 +1,9 @@
 import numpy as np
 import pandas as pd
+from hamilton.function_modifiers import (
+    source,
+    value,
+)
 
 def wkpentopounds(amt_paid:float) -> float:
 
@@ -62,3 +66,24 @@ def charity_shops(shop: pd.DataFrame) -> pd.DataFrame:
     shop = shop.to_frame()
     
     return shop[header].isin(shop_list)
+
+
+def update_config(config:dict) -> dict:
+    new_config = config
+    for function, code_dict in config.items():
+        new_code_dict = code_dict
+        for code, variables_dict in code_dict.items():
+            new_variables_dict = variables_dict
+            for variable, input in variables_dict.items():
+                if "source" in input:
+                    temp_str = input.split('(')[1]
+                    temp_str = temp_str.split(')')[0]
+                    new_variables_dict[variable] = source(temp_str)
+                elif "value" in input:
+                    temp_str = input.split('(')[1]
+                    temp_str = temp_str.split(')')[0]
+                    new_variables_dict[variable] = value(temp_str)
+            new_code_dict[code] = new_variables_dict
+        new_config[function] = new_code_dict
+    
+    return new_config

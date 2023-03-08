@@ -1,4 +1,22 @@
-{ 
+{
+    "nansum2":{
+        "c21111t":{
+            "var1":"source(c21111)",
+            "var2":"source(c21111c)"
+        }
+    },
+    "nansum3": {
+        "c21111":{
+            "var1":"source(e14111)",
+            "var2":"source(e14112)",
+            "var3":"source(e14113)"
+        },
+        "c21111c":{
+            "var1":"source(e14111c)",
+            "var2":"source(e14112c)",
+            "var3":"source(e14113c)"
+        }
+    },
     "c_codes_shops": {
         "c21111l": {
             "shop": "source(shop)", 
